@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计划任务管理</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/TaskPlanningList.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" data-toggle="collapse" data-parent="#steps" href="#stepOne">
+                            <span class="icons" style="background: url(../images/date-a.png) no-repeat;"></span>
+                            计划任务管理
+                        </a>
+                    </div>
+                    <div id="stepOne" class="panel-collapse collapse in">
+                        <!-- <div class="panel-body">
+                            111
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#steps" href="#stepTwo">
+                            <span class="icons" style="background: url(../images/file-g.png) no-repeat;"></span>
+                            数据中心
+                        </a>
+                    </div>
+                    <div id="stepTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div><a href="./AllStatistics.html">所有数据</a></div>
+                            <div><a href="./AuditableData.html">待审核数据</a></div>
+                            <div><a href="./NoLongerAudit.html">不通过数据</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>计划任务管理</b> / <b>计划任务管理</b>
+            </div>
+            <div class="search">
+                <form class="form form-inline searchForm" role="form">
+                    <div class="form-gruop">
+                        <label>任务名称
+                            <input class="form-control" type="text">
+                        </label>
+
+                    </div>
+                    <div class="form-gruop" style="min-width: 220px;">
+                        <label>任务状态
+                            <select class="form-control selectpicker" title="请选择任务状态">
+                                <option value="全部">全部</option>
+                                <option value="全部">未发布</option>
+                                <option value="全部">已发布</option>
+                                <option value="全部">已撤回</option>
+                                <option value="全部">已启用</option>
+                                <option value="全部">已停用</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-gruop">
+                        <button class="form-control btn-primary">查询</button>
+                        <button class="form-control btn-default" type="reset" style="margin-left: 10px;">重置</button>
+                    </div>
+                </form>
+            </div><!-- 查询 -->
+            <div class="tableDiv">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>任务计划名称</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            <th>任务状态</th>
+                            <th>计划要求</th>
+                            <th><button class="btn btn-primary">创建任务计划</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskPlanTbody">
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation" style="overflow: hidden;">
+                    <ul id="pageNum" class="pagination" style="margin: 0 100px 0 20px;float: right;">
+                    </ul>
+                    <select id="pageSelect"></select>
+                    <span id="totalPages" style="float:right;line-height:34px;cursor: default;"></span>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入数据列表 -->
+    <script src="../js/taskPlanngList.js"></script>
+
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

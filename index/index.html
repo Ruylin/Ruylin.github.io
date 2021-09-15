@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS控制台</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- 引入echarts -->
+    <script src="../js/echarts.min.js"></script>
+    <!-- 引入主导航栏css -->
+    <link rel="stylesheet" href="../css/mainNav.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 百度地图 -->
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=ztt7LymhBq98bk3hlS2jU3sgZnPwioCF"></script>
+    <!-- 创建计划任务 -->
+    <link rel="stylesheet" href="../css/creatTaskPlan.css">
+    <link rel="stylesheet" href="../css/jedate.css">
+    <link rel="stylesheet" href="../css/jedatefont.ttf">
+    <link rel="stylesheet" href="../css/jedatefont.woff">
+    <script src="../js/jedate.min.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <ul class="nav nav-tabs mlNav">
+                <li id="collection"><a class="nav-acitve" href="#collection-tab" data-toggle="tab">采集中</a>
+                </li>
+                <li id="expire"><a href="#expire-tab" data-toggle="tab">已到期</a></li>
+                <li id="view" class="active"><a href="#view-tab" data-toggle="tab">数据查看</a></li>
+                <li class="slider"></li>
+            </ul>
+            <div id="switchTab">
+                <div class="tab-content">
+                    <!-- 采集中 -->
+                    <div class="tab-pane" id="collection-tab">
+                        <ul class="collection-ul">
+                            <li class="collection-item-1">
+                                <button class="btn btn-primary">当前</button>
+                                <h4>西樵镇数据采集0823</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-23 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>237</div>
+                                    <div><span>已审核：</span>1</div>
+                                    <div><span>已采集：</span>10</div>
+                                    <div><span>未采集：</span>227</div>
+                                </div>
+                            </li>
+                            <li class="collection-item-2">
+                                <button class="btn btn-primary">选择</button>
+                                <h4>西樵镇数据采集082456</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-27 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>2193</div>
+                                    <div><span>已审核：</span>0</div>
+                                    <div><span>已采集：</span>0</div>
+                                    <div><span>未采集：</span>2193</div>
+                                </div>
+                            </li>
+                            <li class="collection-item-3">
+                                <button class="btn btn-primary">选择</button>
+                                <h4>数据采集082356</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-27 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>2193</div>
+                                    <div><span>已审核：</span>0</div>
+                                    <div><span>已采集：</span>24</div>
+                                    <div><span>未采集：</span>2169</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 已到期 -->
+                    <div class="tab-pane" id="expire-tab">
+                        <ul class="expire-ul">
+                            <li class="expire-item-1">
+                                <button class="btn btn-primary btn-success">当前</button>
+                                <h4 class="nowChose">里水镇采集01</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-23 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>237</div>
+                                    <div><span>已审核：</span>1</div>
+                                    <div><span>已采集：</span>10</div>
+                                    <div><span>未采集：</span>227</div>
+                                </div>
+                            </li>
+                            <li class="expire-item-2">
+                                <button class="btn btn-primary">选择</button>
+                                <h4>南海渔业采集449</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-27 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>2193</div>
+                                    <div><span>已审核：</span>0</div>
+                                    <div><span>已采集：</span>0</div>
+                                    <div><span>未采集：</span>2193</div>
+                                </div>
+                            </li>
+                            <li class="expire-item-3">
+                                <button class="btn btn-primary">选择</button>
+                                <h4>南海渔业采集</h4>
+                                <div class="startTime">
+                                    <b>任务开始时间:</b>
+                                    2021-08-22 00:00:00
+                                </div>
+                                <div class="endTime">
+                                    <b>任务结束时间:</b>
+                                    2021-08-27 00:00:00
+                                </div>
+                                <ol>
+                                    <li><button class="btn btn-info">采集区域</button></li>
+                                    <li><button class="btn btn-info">采集要求</button></li>
+                                    <li><button class="btn btn-info">执行情况</button></li>
+                                    <li><button class="btn btn-info">数据清单</button></li>
+                                </ol>
+                                <div class="infos">
+                                    <div><span>图斑总数：</span>2193</div>
+                                    <div><span>已审核：</span>0</div>
+                                    <div><span>已采集：</span>24</div>
+                                    <div><span>未采集：</span>2169</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 数据查看 -->
+                    <div class="tab-pane active" id="view-tab">
+                        <div class="view-item-1">
+                            <h4>
+                                <b>鱼塘总数量: 28525 块</b>
+                                <small>各二级地类数量</small>
+                            </h4>
+                            <div id="echarts-item-1"></div>
+                        </div>
+                        <div class="view-item-2">
+                            <h4>
+                                <b>鱼塘总面积: 151857.86 亩</b>
+                                <small>各二级地类数量</small>
+                            </h4>
+                            <div id="echarts-item-2"></div>
+                        </div>
+                        <div class="view-item-3">
+                            <h4>
+                                <b>主体类型分布</b>
+                                <small>各二级地类数量</small>
+                            </h4>
+                            <div id="echarts-item-3"></div>
+                        </div>
+                        <div class="view-item-4">
+                            <h4>
+                                <b>辖区鱼塘总产值: 315,271,338 万</b>
+                                <small>各二级地类数量</small>
+                            </h4>
+                            <div id="echarts-item-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <div id="createTaskPlan" class="">
+                    <a href="#" class="btn btn-primary">区镇管理员/创建任务计划 <span
+                            class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <div class="">
+                    <a href="#" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-random"></span>
+                        任务执行/数据标注/村居采集，镇/街区支持录入
+                        <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <div class="">
+                    <a href="#" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-bell"></span>
+                        任务数据查看/审核/镇街审核/区支持审核</a>
+                </div>
+            </div>
+            <div class="select">
+                <div class="jurisdiction">
+                    <div class="tit">当前辖区</div>
+                    <select class="form-control" id="level-4">
+                        <option hidden>全部</option>
+                    </select>
+                    <span style="margin: 0 5px;">-</span>
+                    <select class="form-control" style="width: 70%;" id="level-5">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+                <div class="patternSpot">
+                    <div class="tit">图斑状态</div>
+                    <select class="form-control">
+                        <option hidden>全部</option>
+                        <option value="">已采集</option>
+                        <option value="">未采集</option>
+                    </select>
+                </div>
+                <div class="taskModel">
+                    <div class="tit">任务模式</div>
+                    <select class="form-control" style="width: 70%;">
+                        <option value="">任务执行模式</option>
+                        <option value="">数据查看模式</option>
+                    </select>
+                </div>
+                <div class="nowTask">
+                    <div class="tit">当前任务</div>
+                    <div>里水镇采集01</div>
+                </div>
+            </div>
+            <div id="map">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建任务模态框 -->
+    <div class="modal fade" id="createTaskPlanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>创建任务计划</h4>
+                    <form class="form createTaskPlanModal-form">
+                        <label>
+                            <div><span style="color: red;">*</span>计划名称</div>
+                            <input type="text" class="form-control">
+                        </label>
+                        <label>
+                            <div><span style="color: red;">*</span>采集时间</div>
+                            <input type="text" class="form-control jeinput" id="dateChose" placeholder="采集任务开始时间">
+                        </label>
+                        <label>
+                            <div><span style="color: red;">*</span>采集区域</div>
+                            <select id="level-4-1" class="form-control">
+                                <option hidden>请选择</option>
+                            </select>
+                            <select id="level-5-1" class="form-control">
+                                <option hidden>请选择</option>
+                            </select>
+                            <button disabled class="btn btn-primary">全选</button>
+                            <button disabled class="btn btn-primary">取消全选</button>
+                        </label>
+                        <label>
+                            <div>采集要求</div>
+                        </label>
+                        <textarea class="form-control" id="" placeholder="请输入采集要求"></textarea>
+                        <label for="taskFile" id="taskFileDiv">
+                            +
+                        </label>
+                        <input type="file" id="taskFile">
+                        <button class="btn btn-primary">保存计划任务</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <script src="../js/map.js"></script>
+    <!-- 获取镇村信息 -->
+    <script src="../js/getTownInfo.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+
+    <script src="../js/creatTaskPlan.js"></script>
+</body>
+
+</html>

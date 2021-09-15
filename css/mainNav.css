@@ -1,0 +1,44 @@
+.min-width{
+    min-width: 1440px;
+}
+.mainNav{
+    line-height: 40px;
+}
+.mainNav>li:first-child h4{
+    line-height: 40px;
+}
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.navBar li{
+    flex: auto;
+}
+.topNav,
+.mainNav>li a:visited{
+    color: white;
+    background: #0086FF !important;
+}
+.mainNav>li a{
+    color: white;
+    transition: background .5s;
+}
+.mainNav>li a:hover,
+.mainNav>li a:active{
+    background: #006BCC !important;
+}
+.topNavDropMenu a{
+    text-align: left;
+    transition: none !important;
+}
+.topNavDropMenu a{
+    color: #333 !important;
+}
+.topNavDropMenu li a:hover{
+    color: #8b97ff !important;
+    background: #ECF5FF !important;
+}
+.aaa{
+    background: #0086FF !important;
+}

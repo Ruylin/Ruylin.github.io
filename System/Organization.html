@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组织结构</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/Organization.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" href="./Organization.html">
+                            <span class="icons" style="background: url(../images/classify1-a.png) no-repeat;"></span>
+                            组织机构</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./RolePermission.html">
+                            <span class="icons" style="background: url(../images/power-g.png) no-repeat;"></span>
+                            角色权限</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./UserControl.html">
+                            <span class="icons" style="background: url(../images/user-g.png) no-repeat;"></span>
+                            用户管理</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./Registration.html">
+                            <span class="icons" style="background: url(../images/warning-g.png) no-repeat;"></span>
+                            注册申请审核</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>系统管理</b> / <b>组织机构</b>
+            </div>
+            <div class="mainBody">
+                <div class="left">
+                    <div class="title">
+                        <h5>组织结构</h5>
+                        <button class="btn btn-primary">新建</button>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="form-control" placeholder="输入关键词进行过滤">
+                        <div>&gt;南海区</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="" class="form" id="OrganizationForm">
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                机构名称
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text" placeholder="南海区">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                机构简称
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                上级机构
+                            </label>
+                            <div class="inputDiv">
+                                <select disabled class="form-control selectpicker" title="请选择">
+                                    <option value="">南海区</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                机构编号
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text" placeholder="请输入机构编号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                联系人
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                联系电话
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                所在地点
+                            </label>
+                            <div class="inputDiv">
+                                <select disabled class="form-control selectpicker" title="请选择">
+                                    <option value="">南海区</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                详细地址
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                备注
+                            </label>
+                            <div class="inputDiv">
+                                <textarea disabled class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

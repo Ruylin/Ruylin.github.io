@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命名管理</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/Rule.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" href="#">命名管理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>命名管理</b> / <b>命名管理</b>
+            </div>
+            <div class="mainBody">
+                <form class="form">
+                    <div class="form-gruop">
+                        <label for="">命名规则设置</label>
+                        <input checked type="radio" name="named"> 启用
+                        <input type="radio" name="named"> 未启用
+                    </div>
+                    <div class="form-gruop">
+                        <label for="">地块类型前缀</label>
+                        <input checked type="radio" name="plot"> 启用
+                        <input type="radio" name="plot"> 未启用
+                        <span><b>示例：鱼塘 -</b></span>
+                    </div>
+                    <div class="form-gruop">
+                        <label for="">镇名字前缀</label>
+                        <input checked type="radio" name="town"> 启用
+                        <input type="radio" name="town"> 未启用
+                        <span><b>示例：九江镇 -</b></span>
+                    </div>
+                    <div class="form-gruop">
+                        <label for="">村名字前缀</label>
+                        <input checked type="radio" name="village"> 启用
+                        <input type="radio" name="village"> 未启用
+                        <span><b>示例：水南村 -</b></span>
+                    </div>
+                    <div class="form-gruop">
+                        <label for="">数字后缀</label>
+                        <input checked type="radio" name="num"> 启用
+                        <input type="radio" name="num"> 未启用
+                        <span><b>示例：- 1</b></span>
+                    </div>
+                    <div class="form-gruop">
+                        <label for="">字母后缀</label>
+                        <input type="radio" name="letter"> 启用
+                        <input checked type="radio" name="letter"> 未启用
+                        <span><b>示例：- A</b></span>
+                    </div>
+                    <div class="form-gruop">
+                        <label><b>完整示例</b></label>
+                        <span>九江镇 - 水南村 - 鱼塘 - 1</span>
+                    </div>
+                    <button class="btn btn-primary">修改</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

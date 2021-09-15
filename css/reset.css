@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 400;
+}
+h1 small{
+    display: block;
+    margin-top: 10px;
+    font-size: 80%;
+}
+.disNone{
+    display: none;
+}
+.disBlock{
+    display: block;
+}
+input::-webkit-input-placeholder{
+    color: #CBD4DA;
+}
+.wordLengtH{
+    position: absolute;
+    right: 40px;
+    top:0;
+    font-size: 12px;
+    line-height: 34px;
+    color: #999;
+    cursor: default;
+}
+span.icons{
+    position: absolute;
+    display: inline-block;
+    top:17px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+}
+

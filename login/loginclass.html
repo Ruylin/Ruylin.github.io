@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渔业资源管理系统-登录</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/loginClass.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but fisheries-management-system doesn't work properly without JavaScript enabled.
+            Please enable it to continue.</strong>
+    </noscript>
+    <div class="login">
+        <div class="login-model">
+            <div class="title">
+                <h1>南海城市大脑<small>渔业资源管理系统</small></h1>
+            </div>
+            <div class="login-way">
+                <div class="byAccount isActive">账号密码登录</div>
+                <div class="byPhone">手机号登录</div>
+                <div class="slider"></div>
+            </div>
+            <form action="" id="login-form">
+                <div class="accountDiv">
+                    <i id="accountSpirit"></i>
+                    <input type="text" id="account" placeholder="请输入账号或手机号码" maxlength="11">
+                    <span id="accountSpan">0/11</span>
+                    <em></em>
+                </div>
+                <div class="passwordDiv">
+                    <i id="passwordSpirit"></i>
+                    <input type="password" id="password" placeholder="请输入密码">
+                    <div class="phoneCaptcha disNone">获取验证码</div>
+                    <em></em>
+                </div>
+                <input type="button" id="login-btn" value="登录">
+            </form>
+            <div class="operation">
+                <div class="forget-password">忘记密码</div>
+                <a href="./register.html" class="registration">信息员注册</a>
+            </div>
+            <div class="qrCode">
+                <img src="../images/m.0c3af3b8.png" alt="二维码登录">
+                <h5>手机二维码登录</h5>
+            </div>
+            <footer>
+                &copy;copyright 2021 阿里云计算有限公司出品
+            </footer>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="forgetPassWordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true" data-backdrop='static'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">忘记密码</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form action="" method="POST" role="form" class="form-horizontal" id="modalForm">
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                <span class="text-danger">*</span>
+                                手机号码
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="phone" required autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                <span class="text-danger">*</span>
+                                验证码
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" name="authCode" required autocomplete="off"
+                                    data-bv-notempty-message="验证码不能为空" />
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-default">获取验证码</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">
+                                <span class="text-danger">*</span>
+                                密码
+                            </label>
+                            <div class="col-lg-8">
+                                <input type="password" class="form-control" name="password" required
+                                    data-bv-notempty-message="密码不能为空" data-bv-identical="true"
+                                    data-bv-identical-field="confirmPassword" data-bv-identical-message="两次输入密码不一致!"
+                                    data-bv-different="true" data-bv-different-field="username"
+                                    data-bv-different-message="密码不能与用户名重复" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">
+                                <span class="text-danger">*</span>
+                                确认密码
+                            </label>
+                            <div class="col-lg-8">
+                                <input type="password" class="form-control" name="confirmPassword" required
+                                    data-bv-notempty-message="密码不能为空" data-bv-identical="true"
+                                    data-bv-identical-field="password" data-bv-identical-message="两次输入密码不一致!"
+                                    data-bv-different="true" data-bv-different-field="username"
+                                    data-bv-different-message="密码不能与用户名重复" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-6">
+                                <button type="button" class="btn btn-warning col-md-offset-4"
+                                    id="closeForgetPassWordModal">关闭</button>
+                                <button type="submit" class="btn btn-info col-md-offset-1">修改</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <script src="../js/forgetPassword.js">
+
+
+    </script>
+    <script src="../js/loginClass.js"></script>
+</body>
+
+</html>

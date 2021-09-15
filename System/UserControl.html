@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/UserControl.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./Organization.html">
+                            <span class="icons" style="background: url(../images/classify1-g.png) no-repeat;"></span>
+                            组织机构</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./RolePermission.html">
+                            <span class="icons" style="background: url(../images/power-g.png) no-repeat;"></span>
+                            角色权限</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" href="./UserControl.html">
+                            <span class="icons" style="background: url(../images/user-a.png) no-repeat;"></span>
+                            用户管理</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./Registration.html">
+                            <span class="icons" style="background: url(../images/warning-g.png) no-repeat;"></span>
+                            注册申请审核</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>系统管理</b> / <b>用户管理</b>
+            </div>
+            <div class="mainBody">
+                <div class="left">
+                    <div class="title">
+                        <h5>组织结构</h5>
+                        <button class="btn btn-primary">新建</button>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="form-control" placeholder="输入关键词进行过滤">
+                        <div>&gt;南海区</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <div class="form-group">
+                            <label>用户等级</label>
+                            <div class="inputDiv">
+                                <select class="form-control selectpicker" title="请选择用户等级搜索">
+                                    <option value="区级用户">区级用户</option>
+                                    <option value="镇街用户">镇街用户</option>
+                                    <option value="村居用户">村居用户</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号</label>
+                            <div class="inputDiv">
+                                <input type="text" class="form-control" placeholder="请输入身份证号搜索">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>手机号码</label>
+                            <div class="inputDiv">
+                                <input type="text" class="form-control" placeholder="请输入身份证号搜索">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>用户名</label>
+                            <div class="inputDiv">
+                                <input type="text" class="form-control" placeholder="请输入身份证号搜索">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">查询</button>
+                    </div>
+                    <div class="userinfos">
+                        <div class="title">
+                            <h5>用户信息</h5>
+                        </div>
+                        <div class="tableDiv">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>登录账号</th>
+                                        <th>姓名</th>
+                                        <th>手机</th>
+                                        <th>部门</th>
+                                        <th>
+                                            <button class="btn btn-primary">新建</button>
+                                            <button class="btn btn-danger">导入</button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>256</td>
+                                        <td>13131323</td>
+                                        <td>cun</td>
+                                        <td>1312145</td>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">查看</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">编辑</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>256</td>
+                                        <td>13131323</td>
+                                        <td>zhen</td>
+                                        <td>1312145</td>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">查看</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">编辑</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

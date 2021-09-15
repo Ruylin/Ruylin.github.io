@@ -1,0 +1,318 @@
+{
+    "result": "success",
+    "data": {
+        "pageNum": 1,
+        "pageSize": 9,
+        "size": 9,
+        "startRow": 0,
+        "endRow": 8,
+        "total": 9,
+        "pages": 1,
+        "list": [
+            {
+                "id": 1,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 4,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 101,
+                        "landTypeLevel": 2,
+                        "landTypeName": "旱地",
+                        "landTypeParentCode": 1,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#000000"
+                    },
+                    {
+                        "id": 5,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 102,
+                        "landTypeLevel": 2,
+                        "landTypeName": "水田",
+                        "landTypeParentCode": 1,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#3FA8AD"
+                    },
+                    {
+                        "id": 6,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 103,
+                        "landTypeLevel": 2,
+                        "landTypeName": "其他",
+                        "landTypeParentCode": 1,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#AFD18A"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 1,
+                "landTypeLevel": 1,
+                "landTypeName": "耕地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#b35f32"
+            },
+            {
+                "id": 2,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 8,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 201,
+                        "landTypeLevel": 2,
+                        "landTypeName": "鱼塘",
+                        "landTypeParentCode": 2,
+                        "systemType": "SS1",
+                        "systemTypes": null,
+                        "color": "#3A3FD2"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 2,
+                "landTypeLevel": 1,
+                "landTypeName": "鱼塘",
+                "landTypeParentCode": 0,
+                "systemType": "SS1",
+                "systemTypes": null,
+                "color": "#3A3FD2"
+            },
+            {
+                "id": 3,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 10,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 301,
+                        "landTypeLevel": 2,
+                        "landTypeName": "果园",
+                        "landTypeParentCode": 3,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#B14356"
+                    },
+                    {
+                        "id": 11,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 302,
+                        "landTypeLevel": 2,
+                        "landTypeName": "茶园",
+                        "landTypeParentCode": 3,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#C5CB48"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 3,
+                "landTypeLevel": 1,
+                "landTypeName": "园地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#FC8452"
+            },
+            {
+                "id": 12,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 18,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 401,
+                        "landTypeLevel": 2,
+                        "landTypeName": "林地",
+                        "landTypeParentCode": 4,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#c70000"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 4,
+                "landTypeLevel": 1,
+                "landTypeName": "林地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#268e01"
+            },
+            {
+                "id": 13,
+                "createTime": null,
+                "updateTime": null,
+                "children": null,
+                "landTypeParentCodes": null,
+                "landTypeCode": 5,
+                "landTypeLevel": 1,
+                "landTypeName": "草地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#3de600"
+            },
+            {
+                "id": 14,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 20,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 601,
+                        "landTypeLevel": 2,
+                        "landTypeName": "城镇村及工矿用地",
+                        "landTypeParentCode": 6,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#424242"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 6,
+                "landTypeLevel": 1,
+                "landTypeName": "城镇村及工矿用地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#424242"
+            },
+            {
+                "id": 15,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 21,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 701,
+                        "landTypeLevel": 2,
+                        "landTypeName": "交通运输用地",
+                        "landTypeParentCode": 7,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#703e3e"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 7,
+                "landTypeLevel": 1,
+                "landTypeName": "交通运输用地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#703e3e"
+            },
+            {
+                "id": 16,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 22,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 801,
+                        "landTypeLevel": 2,
+                        "landTypeName": "水域及水利设施",
+                        "landTypeParentCode": 8,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#e9afaf"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 8,
+                "landTypeLevel": 1,
+                "landTypeName": "水域及水利设施",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#e9afaf"
+            },
+            {
+                "id": 17,
+                "createTime": null,
+                "updateTime": null,
+                "children": [
+                    {
+                        "id": 23,
+                        "createTime": null,
+                        "updateTime": null,
+                        "children": null,
+                        "landTypeParentCodes": null,
+                        "landTypeCode": 901,
+                        "landTypeLevel": 2,
+                        "landTypeName": "其他土地",
+                        "landTypeParentCode": 9,
+                        "systemType": "SS2",
+                        "systemTypes": null,
+                        "color": "#0d0d0d"
+                    }
+                ],
+                "landTypeParentCodes": null,
+                "landTypeCode": 9,
+                "landTypeLevel": 1,
+                "landTypeName": "其他土地",
+                "landTypeParentCode": 0,
+                "systemType": "SS2",
+                "systemTypes": null,
+                "color": "#0d0d0d"
+            }
+        ],
+        "prePage": 0,
+        "nextPage": 0,
+        "isFirstPage": true,
+        "isLastPage": true,
+        "hasPreviousPage": false,
+        "hasNextPage": false,
+        "navigatePages": 8,
+        "navigatepageNums": [
+            1
+        ],
+        "navigateFirstPage": 1,
+        "navigateLastPage": 1,
+        "firstPage": 1,
+        "lastPage": 1
+    },
+    "errorCode": "00000",
+    "errorMsg": "success"
+}

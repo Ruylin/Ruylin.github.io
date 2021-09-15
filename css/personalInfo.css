@@ -1,0 +1,20 @@
+#personalInfoModal .modal-dialog{
+    width: 50vw ;
+}
+.personalInfoBody{
+    margin: 10px;
+    margin-top: 30px;
+    padding:10px;
+    border: 1px solid #ddd;
+}
+.personalInfoItem{
+    overflow: hidden;
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+}
+.controlBtnGroup{
+    overflow: hidden;
+}
+.controlBtnGroup button{
+    float: right;
+}

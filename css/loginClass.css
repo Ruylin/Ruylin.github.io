@@ -1,0 +1,162 @@
+.login{
+    min-width: 1440px;
+    height: 100vh;
+    background: url(../images/background.2ff968a9.png) no-repeat;
+    background-size: cover;
+    background-position:top;
+    overflow: auto;
+}
+.login-model{
+    width: 350px;
+    margin: 0 auto;
+}
+.title{
+    margin-top: 114px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-way{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.isActive{
+    color: #409eff;
+}
+.byAccount,
+.byPhone{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+.byAccount:hover,
+.byPhone:hover{
+    color: #409eff;
+}
+.slider{
+    position: absolute;
+    width: 155px;
+    height: 2px;
+    background: #409eff;
+    left: 0;
+    bottom: -2px;
+    transition: .4s cubic-bezier(.645,.045,.355,1);
+}
+.accountDiv,
+.passwordDiv{
+    display: flex;
+    margin-bottom: 22px;
+    position: relative;
+}
+.accountDiv em,
+.passwordDiv em{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    color: #F56C6C;
+    font-size: 12px;
+    font-style:normal
+}
+#login-form i{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url(../images/loginSpirit.png) no-repeat;
+}
+i#passwordSpirit{
+    background-position: 0 -30px;
+}
+#accountSpan{
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #999;
+    cursor: default;
+}
+#login-form input{
+    flex: auto;
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    padding: 0 30px;
+    background-color: #fff;
+    transition: border-color .3s;
+}
+/* #login-form input */
+#login-form input:focus{
+    border-color: #66B1FF;
+}
+#login-form .phoneCaptcha{
+    background: #67C23A;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+    border-radius: 4px;
+    padding: 0 15px;
+    color: white;
+    cursor: pointer;
+}
+#login-form .phoneCaptcha:hover{
+    background: #67c23ad5;
+}
+#login-form #login-btn{
+    color: white;
+    background: #409EFF;
+    cursor: pointer;
+    transition: background .3s;
+    width: 100%;
+    margin-bottom: 22px;
+}
+#login-form #login-btn:hover{
+    background: #66B1FF;
+}
+.operation{
+    display: flex;
+    justify-content: space-between;
+}
+.operation div,
+.operation a{
+    color: #40a0ff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.operation div:hover,
+.operation a:hover{
+    cursor: pointer;
+    color: #40a0ffc4;
+}
+.qrCode{
+    margin: 50px auto 0;
+    width: 130px;
+    text-align: center;
+}
+.qrCode img{
+    width: 100%;
+}
+.qrCode h5{
+    font-weight: 500;
+}
+footer{
+    margin-top: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+.registration{
+    text-decoration: none;
+}

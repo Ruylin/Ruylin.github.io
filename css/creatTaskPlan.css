@@ -1,0 +1,46 @@
+#createTaskPlanModal .modal-dialog{
+    width: 50vw;
+}
+.createTaskPlanModal-form label{
+    display: flex;
+    line-height: 34px;
+    margin: 20px 0;
+}
+.createTaskPlanModal-form label div{
+width: 100px;
+}
+.createTaskPlanModal-form label input,
+.createTaskPlanModal-form label select{
+    flex: 1;
+    margin-right: 10px;
+}
+.createTaskPlanModal-form label button{
+    margin-right: 10px;
+}
+.createTaskPlanModal-form textarea{
+    width: 100%;
+    resize: vertical;
+    min-height: 34px;
+}
+#taskFileDiv{
+    display: block;
+    width: 150px;
+    height:150px;
+    line-height: 150px;
+    border: 1px dashed #ddd;
+    text-align: center;
+    font-size: 40px;
+    color: #ddd;
+    cursor: pointer;
+    background-color: #FBFDFF;
+    border-radius: 5px;
+}
+#taskFileDiv:hover{
+    border-color: #409EFF;
+}
+#taskFile{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

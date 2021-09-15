@@ -1,0 +1,42 @@
+.mainContent{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    min-width: 1440px;
+}
+.mainLeft{
+    width: 300px;
+    min-width: 300px !important;
+}
+.mainRight{
+    flex: auto;
+    border-left: 1px solid #ddd;
+    min-width: 1440px !important;
+}
+.top{
+    line-height: 46px;
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+}
+.mainBody{
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+}
+.form-gruop{
+    height: 40px;
+    line-height: 40px;
+}
+.form-gruop label{
+    width: 100px;
+    text-align: right;
+}
+.form-gruop :nth-child(2),
+.form-gruop :nth-child(3),
+.form-gruop :nth-child(4){
+    margin-left: 20px;
+}
+.mainBody button{
+    margin: 20px;
+}

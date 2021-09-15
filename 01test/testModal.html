@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模态框测试</title>
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="./modal-box.js"></script>
+</head>
+
+<body>
+    <button class="newmage">1</button>
+    <button class="newselect">2</button>
+    <button class="newusers">3</button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog"></div>
+    </div>
+
+
+    <script>
+        magementx('.newmage', '.newselect', '.newusers')
+    </script>
+</body>
+
+</html>

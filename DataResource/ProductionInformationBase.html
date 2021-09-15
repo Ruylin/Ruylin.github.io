@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鱼塘生产信息库</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./BootStrap/css/bootstrapValidator.min.css"> -->
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/ProductionInformationBase.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+    <!-- 获取镇村信息 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getTownInfo.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./ProductionBase.html">
+                            <span class="icons" style="background: url(../images/company-g.png) no-repeat;"></span>
+                            生产主体库
+                        </a>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active">
+                            <span class="icons" style="background: url(../images/pot-a.png) no-repeat;"></span>
+                            鱼塘生产信息库
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>生产主体库</b> / <b>鱼塘生产信息库</b>
+            </div>
+            <div class="search">
+                <div>
+                    <span>图斑ID</span>
+                    <input type="text" class="form-control" placeholder="请输入">
+                </div>
+                <div>
+                    <span>地塘块命名</span>
+                    <input type="text" class="form-control" placeholder="请输入">
+                </div>
+                <div>
+                    <span>镇街</span>
+                    <select id="level-4" class="form-control">
+                        <option hidden>选择镇街</option>
+                    </select>
+                </div>
+                <div>
+                    <span>村居</span>
+                    <select id="level-5" disabled class="form-control">
+                        <option hidden>选择村居</option>
+                        <option value="">无数据</option>
+                    </select>
+                </div>
+                <div>
+                    <span>所属主体</span>
+                    <input type="text" class="form-control" placeholder="请输入">
+                </div>
+                <div>
+                    <span>地块类型</span>
+                    <select title="选择镇街" class="form-control">
+                        <option hidden>请选择</option>
+                        <option value="">耕地</option>
+                        <option value="">鱼塘</option>
+                        <option value="">园地</option>
+                        <option value="">林地</option>
+                        <option value="">草地</option>
+                        <option value="">城镇村及工矿用地</option>
+                    </select>
+                </div>
+                <div>
+                    <span>农产品分类</span>
+                    <select title="选择镇街" class="form-control">
+                        <option hidden>请选择</option>
+                        <option value="">粮油</option>
+                        <option value="">蔬菜</option>
+                        <option value="">水果</option>
+                        <option value="">水产品</option>
+                        <option value="">禽蛋类</option>
+                        <option value="">畜牧类</option>
+                    </select>
+                </div>
+                <div>
+                    <span>行业</span>
+                    <label for="crop"><input id="crop" class="radio" type="radio" name="industry">种植业</label>
+                    <label for="fishery"><input checked id="fishery" class="radio" type="radio"
+                            name="industry">渔业</label>
+                </div>
+                <button class="btn btn-primary">查询</button>
+                <button class="btn btn-default">重置</button>
+            </div>
+            <!-- 搜索 -->
+            <div class="mainBody">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>主体名称</th>
+                            <th>联系人</th>
+                            <th>电话</th>
+                            <th>主体类别</th>
+                            <th>主体组织机构代码</th>
+                            <th>基地</th>
+                            <th>主体地址</th>
+                            <th>
+                                <button class="btn btn-primary">新增</button>
+                                <button class="btn btn-warning">导入</button>
+                                <button class="btn btn-danger">导出</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>鲁岗企业</td>
+                            <td>鲁岗企业</td>
+                            <td>13111248114</td>
+                            <td>个体户</td>
+                            <td>13011223344</td>
+                            <td>鲁岗企业</td>
+                            <td>鲁岗企业</td>
+                            <td>
+                                <a href="#">查看</a>
+                                <a href="#">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>鲁岗企业</td>
+                            <td>鲁岗企业</td>
+                            <td>13111248114</td>
+                            <td>个体户</td>
+                            <td>13011223344</td>
+                            <td>鲁岗企业</td>
+                            <td>鲁岗企业</td>
+                            <td>
+                                <a href="#">查看</a>
+                                <a href="#">编辑</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

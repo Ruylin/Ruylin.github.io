@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>采集人员</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./BootStrap/css/bootstrapValidator.min.css"> -->
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/CollectorsList.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./DivisionManagement.html">
+                            <span class="icons" style="background: url(../images/classify-g.png) no-repeat;"></span>
+                            行政区划</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" href="./CollectorsList.html">
+                            <span class="icons" style="background: url(../images/user-a.png) no-repeat;"></span>
+                            采集人员</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./UnitProduction.html">
+                            <span class="icons" style="background: url(../images/share-g.png) no-repeat;"></span>
+                            数据字典</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./LandAdmin.html">
+                            <span class="icons" style="background: url(../images/classify1-g.png) no-repeat;"></span>
+                            土地类别管理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>基础信息管理</b> / <b>采集人员</b>
+            </div>
+            <div class="search">
+                <div>
+                    <span>采集人员</span>
+                    <input type="text" class="form-control">
+                </div>
+                <div>
+                    <span>角色</span>
+                    <select class="form-control">
+                        <option value="请选择">请选择</option>
+                        <option value="村级">村级</option>
+                        <option value="镇级">镇级</option>
+                    </select>
+                </div>
+                <div><button class="btn btn-primary">查询</button></div>
+
+            </div><!-- 搜索 -->
+            <div class="mainBody">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>角色</th>
+                            <th>辖区</th>
+                            <th>辖区编号</th>
+                            <th>身份证</th>
+                            <th>联系方式</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>zkkkdd</td>
+                            <td>镇级</td>
+                            <td>桂城街道</td>
+                            <td>1532442</td>
+                            <td>33032231231214</td>
+                            <td>1524634645</td>
+                            <td>
+                                <a href="#">编辑</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

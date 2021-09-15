@@ -1,0 +1,178 @@
+
+.mainLeft{
+    /* float: left; */
+    /* width: 300px !important; */
+    height: 96vh;
+    overflow-y: scroll;
+}
+.mlNav{
+    display: flex;
+    position: relative;
+    width: 300px;
+}
+.mlNav li{
+    flex: 1;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+.mlNav li a{
+    border: none !important;
+    color: #333;
+}
+.mlNav .active a{
+    color: #0086FF !important;
+}
+.slider{
+    position: absolute !important;
+    bottom: 0;
+    left: 200px;
+    width: 100px;
+    height: 2px;
+    background: #0086FF;
+    border: none !important;
+    transition: .4s cubic-bezier(.645,.045,.355,1);
+}
+.mainContent{
+    display: flex;
+    height: auto;
+}
+.mainRight{
+    /* width: 100%; */
+    flex: auto;
+    position: relative;
+}
+.mainRight .top{
+    /* width: 1140px; */
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+}
+.mainRight .top>div{
+    margin-right: 10px;
+}
+.mainRight .top>div a{
+    line-height: 30px;
+}
+#map{
+    width: 100%;
+    height: calc(100% - 68px);
+    /* background: url(../images/map.png) no-repeat; */
+    /* background-size:cover; */
+}
+.select{
+    position: absolute;
+    width: 450px;
+    height: 260px;
+    left: 0;
+    top:80px;
+    background: rgba(0, 0, 0, .6);
+    padding-top: 50px;
+    color: white;
+    border-radius: 10px;
+    z-index: 10;
+}
+.select select{
+    width: auto !important;
+}
+.tit{
+    width: 100px;
+    padding: 0 15px;
+    
+    
+}
+.jurisdiction,
+.patternSpot,
+.taskModel,
+.nowTask{
+    margin-top: 10px;
+    line-height: 34px;
+    display: flex;
+    padding-right: 15px;
+}
+
+/* 采集中 */
+.collection-ul{
+    width: 270px;
+    margin: 15px;
+    list-style: none;
+}
+.collection-ul>li{
+    padding:15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 20%);
+    margin-top: 20px;
+}
+.collection-ul>li ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+.collection-ul>li ol>li{
+    margin:5px;
+}
+
+.startTime,
+.endTime{
+    margin: 10px 0;
+}
+.infos{
+    margin: 10px 0;
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.infos div{
+    width: 110px;
+}
+.infos span{
+    width: 70px;
+    text-align: right;
+}
+
+/* 已到期 */
+.expire-ul{
+    width: 270px;
+    margin: 15px;
+    list-style: none;
+}
+.expire-ul>li{
+    padding:15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 20%);
+    margin-top: 20px;
+}
+.expire-ul>li ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+.expire-ul>li ol>li{
+    margin:5px;
+}
+
+
+.nowChose{
+    color: red;
+}
+
+/* 数据查看 */
+div[class^='view-item-']{
+    padding: 10px;
+    position: relative;
+}
+div[class^='view-item-'] h4{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div[class^='view-item-'] h4 small{
+    display: block;
+    line-height: 30px;
+}
+div[id^='echarts-item-']{
+    width: 100%;
+    height: 300px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有数据</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/AllStatistics.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+    <!-- 获取镇村信息 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getTownInfo.js"></script>
+    <!-- bootstrap-select -->
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./TaskPlanningList.html">
+                            <span class="icons" style="background: url(../images/date-g.png) no-repeat;"></span>
+                            计划任务管理
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#steps" href="#stepTwo">
+                            <span class="icons" style="background: url(../images/file-g.png) no-repeat;"></span>
+                            数据中心
+                        </a>
+                    </div>
+                    <div id="stepTwo" class="panel-collapse ">
+                        <div class="panel-body">
+                            <div><a class="active" href="#">所有数据</a></div>
+                            <div><a href="./AuditableData.html">待审核数据</a></div>
+                            <div><a href="./NoLongerAudit.html">不通过数据</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>计划任务管理</b> / <b>数据中心</b> / <b>所有数据</b>
+            </div>
+            <div class="search">
+                <form class="form form-inline searchForm" role="form">
+                    <div class="form-gruop">
+                        <label>图斑ID
+                            <input class="form-control" type="text" placeholder="请输入">
+                        </label>
+                    </div>
+                    <div class="form-gruop">
+                        <label>所属主体
+                            <input class="form-control" type="text" placeholder="请输入">
+                        </label>
+                    </div>
+                    <div class="form-gruop">
+                        <label>镇街
+                            <select id="level-4" class="form-control">
+                                <option hidden>选择镇街</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-gruop">
+                        <label>村居
+                            <select id="level-5" disabled class="form-control">
+                                <option value="暂无数据">暂无数据</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-gruop">
+                        <button class="form-control btn-primary">查询</button>
+                        <button class="form-control btn-default" type="reset" style="margin-left: 10px;">重置</button>
+                    </div>
+                </form>
+            </div><!-- 查询 -->
+            <div class="body">
+                <div class="bodyLeft">
+                    <div class="form-group  searchItem">
+                        <input type="text" class="form-control" placeholder="输入关键字进行过滤">
+                        <button class="btn btn-primary">搜索</button>
+                    </div>
+                    <div class="tasks">
+                        <h5>请选择任务</h5>
+                        <ul class="tasksUl">
+                            <li>
+                                <div class="choice">1 - 1/0</div>
+                                <button class="btn btn-gray btn-success">已选中</button>
+                            </li>
+                            <li>
+                                <div>2 - 西樵镇数据采集09010910 / 15672</div>
+                                <button class="btn btn-gray">未选中</button>
+                            </li>
+                            <li>
+                                <div>3 - 1/0</div>
+                                <button class="btn btn-gray">未选中</button>
+                            </li>
+                            <li>
+                                <div>4 - 1/0</div>
+                                <button class="btn btn-gray">未选中</button>
+                            </li>
+                            <li>
+                                <div>5 - 1/0</div>
+                                <button class="btn btn-gray">未选中</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bodyRight">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" class="checkbox-inline"></th>
+                                <th>图斑ID</th>
+                                <th>所在任务</th>
+                                <th>地塘块命名</th>
+                                <th>镇街</th>
+                                <th>村居</th>
+                                <th>面积</th>
+                                <th>采集状态</th>
+                                <th>审核状态</th>
+                                <th>审核人</th>
+                                <th>审核时间</th>
+                                <th><button class="btn btn-primary">批量审核</button></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="checkbox-inline"></td>
+                                <td>NHQ15302</td>
+                                <td>西樵镇数据采集09010910</td>
+                                <td>西樵镇-上金欧村-鱼塘-150</td>
+                                <td>西樵镇</td>
+                                <td>上金欧村</td>
+                                <td>3.3597</td>
+                                <td>未采集</td>
+                                <td>初始状态</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="#">审核</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="checkbox-inline"></td>
+                                <td>NHQ15302</td>
+                                <td>西樵镇数据采集09010910</td>
+                                <td>西樵镇-上金欧村-鱼塘-150</td>
+                                <td>西樵镇</td>
+                                <td>上金欧村</td>
+                                <td>3.3597</td>
+                                <td>未采集</td>
+                                <td>初始状态</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="#">审核</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/selectTask.js"></script>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

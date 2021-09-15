@@ -1,0 +1,38 @@
+.mrt{
+    margin-top: 5%;
+}
+.mrt h1{
+    margin-bottom: 5%;
+}
+.title{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 96%;
+    border-bottom: 1px solid #ddd;
+}
+.title a{
+    margin: 22px 20px 20px 0;
+    text-decoration: none;
+    color: black;
+}
+.title h3{
+    position: relative;
+    margin-left: 20px;
+}
+.title h3::before{
+    content: '|';
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    color: #ddd;
+    font-size: 18px;
+}
+.panel{
+    border:1px solid #ddd;
+}
+.register-textarea{
+    resize: vertical;
+    min-height: 40px;
+}
+

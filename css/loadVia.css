@@ -1,0 +1,28 @@
+.loadVia{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.loadVia img{
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.loadVia>div{
+    width: 100%;
+}
+.loadVia>input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+.controlBtnGroup{
+    overflow: hidden;
+}
+.controlBtnGroup button{
+    float: right;
+}

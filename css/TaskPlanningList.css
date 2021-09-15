@@ -1,0 +1,46 @@
+.mainContent{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    min-width: 1440px;
+}
+.mainLeft{
+    width: 300px;
+}
+.mainRight{
+    flex: auto;
+    border-left: 1px solid #ddd;
+}
+.top{
+    line-height: 46px;
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+}
+.search{
+    height: 130px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);;
+}
+.searchForm{
+    display: flex;
+    padding: 50px 0 0 40px;
+}
+.searchForm>div{
+    margin-left: 20px;
+}
+.searchForm .active  span{
+    color: white !important;
+}
+.tableDiv{
+    padding: 15px;
+    border:1px solid #ddd;
+    margin: 20px;
+}
+.tableDiv a{
+    text-decoration: none;
+}
+.tableDiv td,
+.tableDiv th{
+    line-height: 50px !important;
+}

@@ -1,0 +1,100 @@
+.mainContent{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    min-width: 1440px;
+}
+.mainLeft{
+    width: 300px;
+    min-width: 300px !important;
+}
+.mainRight{
+    flex: auto;
+    border-left: 1px solid #ddd;
+    min-width: 1440px !important;
+}
+.top{
+    line-height: 46px;
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+}
+.mainBody{
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+    /* display: flex; */
+    overflow: hidden;
+}
+.mainBody .left{
+    width: 290px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+}
+.mainBody .left .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.mainBody .left .content{
+    padding:20px;
+}
+.mainBody .left .content span{
+    display: inline-block;
+    color: white;
+    padding: 0 5px;
+}
+.mainBody .left .content>div{
+    margin-top: 5px;
+}
+.mainBody .left .content div:nth-child(1)>span{
+    background: #222222;
+}
+.mainBody .left .content div:nth-child(2)>span{
+    background: #3A3FD2;
+}
+.mainBody .left .content div:nth-child(3)>span{
+    background: #FC8452;
+}
+.mainBody .left .content div:nth-child(4)>span{
+    background: #268E01;
+}
+.mainBody .left .content div:nth-child(5)>span{
+    background: #3DE600;
+}
+.mainBody .left .content div:nth-child(6)>span{
+    background: #424242;
+}
+.mainBody .left .content div:nth-child(7)>span{
+    background: #703E3E;
+}
+.mainBody .left .content div:nth-child(8)>span{
+    background: #E9AFAF;
+}
+.mainBody .left .content div:nth-child(9)>span{
+    background: #0D0D0D;
+}
+.mainBody .right{
+    margin: 0 20px;
+    /* flex: auto; */
+    width: calc(100% - 330px);
+    float: left;
+}
+.form-group{
+    display: flex;
+    line-height: 34px;
+}
+.form-group label{
+    width: 100px;
+    text-align: right;
+}
+.form-group textarea{
+    resize: vertical;
+    min-height: 34px;
+}
+.inputDiv{
+    margin-left: 20px;
+    flex: auto;
+}

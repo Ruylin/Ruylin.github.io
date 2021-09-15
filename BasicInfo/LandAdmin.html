@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土地类别管理</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/LandAdmin.css">
+    <link rel="stylesheet" href="../css/mainNav.css">
+
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <!-- 生成主导航栏 -->
+    <div id="mainNav"></div>
+    <script src="../js/mainNav.js"></script>
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="panel-group" id="steps">
+                <!-- Step 1 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./DivisionManagement.html">
+                            <span class="icons" style="background: url(../images/classify-g.png) no-repeat;"></span>
+                            行政区划</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./CollectorsList.html">
+                            <span class="icons" style="background: url(../images/user-g.png) no-repeat;"></span>
+                            采集人员</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="./UnitProduction.html">
+                            <span class="icons" style="background: url(../images/share-g.png) no-repeat;"></span>
+                            数据字典</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="active" href="./LandAdmin.html">
+                            <span class="icons" style="background: url(../images/classify1-a.png) no-repeat;"></span>
+                            土地类别管理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="top">
+                <b>渔业资源管理系统</b> / <b>基础信息管理</b> / <b>土地类别管理</b>
+            </div>
+            <div class="mainBody">
+                <div class="left">
+                    <div class="content">
+                        <div>&gt; <span>耕地</span></div>
+                        <div>&gt; <span>鱼塘</span></div>
+                        <div>&gt; <span>园地</span></div>
+                        <div>&gt; <span>林地</span></div>
+                        <div>&gt; <span>草地</span></div>
+                        <div>&gt; <span>城镇村及工矿用地</span></div>
+                        <div>&gt; <span>交通运输用地</span></div>
+                        <div>&gt; <span>水域及水利设施</span></div>
+                        <div>&gt; <span>其他土地</span></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="" class="form" id="OrganizationForm">
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                类别编号
+                            </label>
+                            <div class="inputDiv">
+                                <input class="form-control" type="text" placeholder="请输入内容">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="text-danger">*</span>
+                                类别名称
+                            </label>
+                            <div class="inputDiv">
+                                <input class="form-control" type="text" placeholder="请输入内容">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                类别等级
+                            </label>
+                            <div class="inputDiv">
+                                <input disabled class="form-control" type="text" placeholder="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                类别颜色
+                            </label>
+                            <div class="inputDiv">
+                                <input type="color" class="form-control" style="width: 100px;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary col-xs-offset-1">保存</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+    <!-- 个人信息模态框 -->
+    <link rel="stylesheet" href="../css/personalInfo.css">
+    <script src="../js/personalInfo.js"></script>
+    <!-- 修改头像 -->
+    <link rel="stylesheet" href="../css/loadVia.css">
+    <script src="../js/loadVia.js"></script>
+</body>
+
+</html>

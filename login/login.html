@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渔业资源管理系统-登录</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+    <script src="../BootStrap/js/bootstrapValidator.min.js"></script>
+    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container" style="height: 100vh;">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 title">
+                <h1 class="text-center">
+                    南海城市大脑
+                    <div><small>渔业资源管理系统</small></div>
+                </h1>
+                <ul class="login-nav">
+                    <li><a id="accountLogin" class="nav-acitve" href="#info-tab" data-toggle="tab">账号密码登录</a></li>
+                    <li><a id="phoneLogin" href="#address-tab" data-toggle="tab">手机号登录</a></li>
+                    <li class="slider"></li>
+                </ul>
+
+                <form id="accountForm" method="post" class="form-horizontal" style="margin-top: 20px;">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="info-tab">
+                            <div class="form-group">
+                                <div class="col-lg-12 accountDiv">
+                                    <i class="accountIcon"></i>
+                                    <input type="text" class="form-control" id="account" name="account"
+                                        placeholder="请输入账号或手机账号" />
+                                    <span class="wordLengtH">0/11</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <i class="passwordIcon"></i>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="请输入密码" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="address-tab">
+                            <div class="form-group">
+                                <div class="col-lg-12 phoneDiv">
+                                    <i class="phoneIcon"></i>
+                                    <input type="text" class="form-control" name="phone" placeholder="请输入手机号码" />
+                                    <span class="wordLengtH">0/11</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-8">
+                                    <i class="passwordIcon"></i>
+                                    <input type="text" class="form-control" name="authCode" placeholder="请输入验证码密码" />
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="btn btn-success col-xs-12">获取验证码</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <button type="submit" id="loginBtn" class="btn btn-primary col-xs-12">提交</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="forget-password col-lg-6">
+                            <a style="text-decoration: none;" href="#">忘记密码</a>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <a style="text-decoration: none;" href="./register.html">信息员注册</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-xs-6 col-xs-offset-3" style="margin-top:10%;">
+                    <img src="../images/m.0c3af3b8.png" style="width: 100%;">
+                    <div class="text-center">手机二维码登录</div>
+                </div>
+                <div class="col-xs-12" style="margin-top:20%;margin-bottom: 5%;">
+                    <div class="text-center">&copy;copyright 2021 阿里云计算有限公司出品</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/login.js"></script>
+    <script src="../js/forgetPassword.js"></script>
+    <script src="../js/judgeLength.js"></script>
+</body>
+
+</html>
