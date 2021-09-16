@@ -35,10 +35,12 @@ function createLandingInfo(list) {
             itemDiv.setAttribute('class', 'panel-collapse collapse');
             let panelBodyDiv = document.createElement('div');
             panelBodyDiv.classList.add('panel-body');
+            panelBodyDiv.style.padding = "0"
             if (list[i].children) {
                 for (let j = 0; j < list[i].children.length; j++) {
                     let child = list[i].children[j];
                     let oDiv = document.createElement('div');
+                    oDiv.style.marginLeft = "30px"
                     oDiv.innerHTML = `<a href='#' data-ltc=${child.landTypeCode} data-ltl=${child.landTypeLevel} data-ltn=${child.landTypeName}><span style="display:inline-block;background:${child.color};padding:0 10px;color:white;margin-top:5px">${child.landTypeName}</span></a>`
                     // console.log(child)
                     panelBodyDiv.appendChild(oDiv);
