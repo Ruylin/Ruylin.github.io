@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/LandAdmin.css">
     <link rel="stylesheet" href="../css/mainNav.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
     <script src="../BootStrap/js/bootstrap-select.min.js"></script>
 </head>
@@ -64,17 +64,7 @@
             </div>
             <div class="mainBody">
                 <div class="left">
-                    <div class="content">
-                        <div>&gt; <span>耕地</span></div>
-                        <div>&gt; <span>鱼塘</span></div>
-                        <div>&gt; <span>园地</span></div>
-                        <div>&gt; <span>林地</span></div>
-                        <div>&gt; <span>草地</span></div>
-                        <div>&gt; <span>城镇村及工矿用地</span></div>
-                        <div>&gt; <span>交通运输用地</span></div>
-                        <div>&gt; <span>水域及水利设施</span></div>
-                        <div>&gt; <span>其他土地</span></div>
-                    </div>
+                    <div class="content" id="landManage"></div>
                 </div>
                 <div class="right">
                     <form action="" class="form" id="OrganizationForm">
@@ -84,7 +74,7 @@
                                 类别编号
                             </label>
                             <div class="inputDiv">
-                                <input class="form-control" type="text" placeholder="请输入内容">
+                                <input id="typeId" class="form-control" type="text" placeholder="请输入内容">
                             </div>
                         </div>
                         <div class="form-group">
@@ -93,7 +83,7 @@
                                 类别名称
                             </label>
                             <div class="inputDiv">
-                                <input class="form-control" type="text" placeholder="请输入内容">
+                                <input id="typeName" class="form-control" type="text" placeholder="请输入内容">
                             </div>
                         </div>
                         <div class="form-group">
@@ -101,7 +91,7 @@
                                 类别等级
                             </label>
                             <div class="inputDiv">
-                                <input disabled class="form-control" type="text" placeholder="1">
+                                <input disabled id="typeLevel" class="form-control" type="text" placeholder="1">
                             </div>
                         </div>
                         <div class="form-group">
@@ -128,6 +118,8 @@
     <!-- 修改头像 -->
     <link rel="stylesheet" href="../css/loadVia.css">
     <script src="../js/loadVia.js"></script>
+    <!-- 土地类别 -->
+    <script src="../js/LandAdmin.js"></script>
 </body>
 
 </html>

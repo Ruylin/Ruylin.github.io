@@ -13,25 +13,52 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="panel">
-            <div class="panel-heading">
-                <a data-toggle="collapse" href="#item-1">
-                    &gt;<span>耕地</span>
-                </a>
-            </div>
-            <div id="item-1" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <div><a href="#">所有数据</a></div>
-                    <div><a href="#">待审核数据</a></div>
-                    <div><a href="#">不通过数据</a></div>
-                </div>
-            </div>
+    <div class="content" id="landManage">
+    </div>
+
+
+
+    <div class="form-group">
+        <label>
+            <span class="text-danger">*</span>
+            类别编号
+        </label>
+        <div class="inputDiv">
+            <input disabled id="typeId" class="form-control" type="text" placeholder="请输入内容">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>
+            <span class="text-danger">*</span>
+            类别名称
+        </label>
+        <div class="inputDiv">
+            <input disabled id="typeName" class="form-control" type="text" placeholder="请输入内容">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>
+            类别等级
+        </label>
+        <div class="inputDiv">
+            <input disabled id="typeLevel" class="form-control" type="text" placeholder="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>
+            类别颜色
+        </label>
+        <div class="inputDiv">
+            <input type="color" class="form-control" style="width: 100px;">
         </div>
     </div>
 
 
-    <script>
+
+
+    <script src="../js/LandAdmin.js"></script>
+
+    <!-- <script>
         function getLandingInfo() {
             let data = new URLSearchParams();
             axios({
@@ -51,56 +78,39 @@
         }
         getLandingInfo();
         function createLandingInfo(list) {
-            list.forEach((item, index) => {
-                // console.log(item, index)
-                let panelDiv = document.createElement('div');
-                panelDiv.innerHTML = `
-                <div class="panel-heading">
-                <a data-toggle="collapse" href="#item-${index}">
-                    &gt;<span style="background-color:"#b35f32";padding:5px 10px;">${list.landTypeName}</span>
-                </a>
-            </div>
-                `;
-                let collapseDiv = document.createElement('div');
-                collapseDiv.setAttribute('id', "item-" + index);
-                collapseDiv.setAttribute("class", "panel-collapse collapse");
-                // collapseDiv.innerHTML = `
-                //         <div><a href="#">所有数据</a></div>
-                //         <div><a href="#">待审核数据</a></div>
-                //         <div><a href="#">不通过数据</a></div>
-                // `;
-                let panelBodyDiv = document.createElement('div');
-                panelBodyDiv.setAttribute("class", "panel-body");
-
-
-
-                console.log(item.children.length)
-                // for (let i = 0; i < item.length; i++) {
-                //     console.log(i)
-                //     if (item.childen === null) {
-                //         continue
-                //     }
-                //     console.log(all.childen)
-                // }
-
-                // item.children.forEach(i => {
-                //     if (i === null) {
-                //         return true
-                //     }
-                //     console.log(i)
-                // })
-                // item.children.forEach((el) => {
-                //     let oDiv = document.createElement('div');
-                //     oDiv.innerHTML = `<div><a href="#">${el.landTypeName}</a></div>`
-                // })
-
-
-
-                collapseDiv.appendChild(panelBodyDiv);
-
-            });
+            let landManage = document.getElementById('landManage');
+            for (let i = 0; i < list.length; i++) {
+                // console.log(list[i])
+                if (list[i]) {
+                    let panelDiv = document.createElement('div');
+                    panelDiv.classList.add('panel');
+                    panelDiv.innerHTML = `
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" href="#item-${i}" style="text-decoration: none;">
+                            &gt;<span style="background:${list[i].color};padding:5px 10px;color:white;">${list[i].landTypeName}</span>
+                        </a>
+                    </div>`;
+                    let itemDiv = document.createElement('div');
+                    itemDiv.setAttribute('id', `item-${i}`);
+                    itemDiv.setAttribute('class', 'panel-collapse collapse');
+                    let panelBodyDiv = document.createElement('div');
+                    panelBodyDiv.classList.add('panel-body');
+                    if (list[i].children) {
+                        for (let j = 0; j < list[i].children.length; j++) {
+                            let child = list[i].children[j];
+                            let oDiv = document.createElement('div');
+                            oDiv.innerHTML = `<span style="display:inline-block;background:${child.color};padding:5px 10px;color:white;">${child.landTypeName}</span>`
+                            console.log(child)
+                            panelBodyDiv.appendChild(oDiv);
+                        }
+                    }
+                    itemDiv.appendChild(panelBodyDiv);
+                    panelDiv.appendChild(itemDiv)
+                    landManage.appendChild(panelDiv);
+                }
+            }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
