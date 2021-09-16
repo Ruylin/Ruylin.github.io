@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/Organization.css">
     <link rel="stylesheet" href="../css/mainNav.css">
+    <!-- 获取镇村信息 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getTownInfoAndSetIn.js"></script>
 
-    <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
-    <script src="../BootStrap/js/bootstrap-select.min.js"></script>
 </head>
 
 <body>
@@ -69,8 +70,22 @@
                         <button class="btn btn-primary">新建</button>
                     </div>
                     <div class="content">
-                        <input type="text" class="form-control" placeholder="输入关键词进行过滤">
-                        <div>&gt;南海区</div>
+                        <div class="filterDiv" style="position: relative;">
+                            <input type="text" class="form-control" placeholder="输入关键词进行过滤">
+                            <span class="wordLengtH" style="right: 10px;">0/20</span>
+                        </div>
+
+                        <div>
+                            <select id="level-4" title="选择镇街" class="form-control">
+                                <option hidden>选择镇街</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="level-5" disabled title="选择镇街" class="form-control">
+                                <option hidden>选择村居</option>
+                                <option value="">无数据</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
@@ -81,7 +96,8 @@
                                 机构名称
                             </label>
                             <div class="inputDiv">
-                                <input disabled class="form-control" type="text" placeholder="南海区">
+                                <input id="organizationName" disabled class="form-control" type="text" placeholder="南海区"
+                                    value="南海区">
                             </div>
                         </div>
                         <div class="form-group">
@@ -98,8 +114,8 @@
                                 上级机构
                             </label>
                             <div class="inputDiv">
-                                <select disabled class="form-control selectpicker" title="请选择">
-                                    <option value="">南海区</option>
+                                <select disabled class="form-control">
+                                    <option id="parentOrganization" value="">请选择</option>
                                 </select>
                             </div>
                         </div>
@@ -109,7 +125,8 @@
                                 机构编号
                             </label>
                             <div class="inputDiv">
-                                <input disabled class="form-control" type="text" placeholder="请输入机构编号">
+                                <input id="organizationId" disabled class="form-control" type="text"
+                                    placeholder="请输入机构编号">
                             </div>
                         </div>
                         <div class="form-group">
@@ -136,8 +153,8 @@
                                 所在地点
                             </label>
                             <div class="inputDiv">
-                                <select disabled class="form-control selectpicker" title="请选择">
-                                    <option value="">南海区</option>
+                                <select disabled class="form-control">
+                                    <option hidden>请选择</option>
                                 </select>
                             </div>
                         </div>
@@ -171,6 +188,11 @@
     <!-- 修改头像 -->
     <link rel="stylesheet" href="../css/loadVia.css">
     <script src="../js/loadVia.js"></script>
+
+    <script src="../js/judgeLength.js"></script>
+    <script>
+        getLength('.filterDiv input', '.filterDiv span', 20);
+    </script>
 </body>
 
 </html>

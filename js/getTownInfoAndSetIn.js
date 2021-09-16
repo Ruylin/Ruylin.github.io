@@ -13,8 +13,8 @@ function getTownInfo() {
         })
 }
 function setTownInfo(AllList) {
-    var pe = document.getElementById('level-4') || document.getElementById('level-4-1');
-    var so = document.getElementById('level-5') || document.getElementById('level-5-1');
+    var pe = document.getElementById('level-4');
+    var so = document.getElementById('level-5');
     AllList.forEach(element => {
         if (element.administrativeLevel === 4) {
             let opPe = document.createElement('option');
@@ -30,13 +30,29 @@ function setTownInfo(AllList) {
         }
         so.innerHTML = `<option hidden>请选择</option>`
         AllList.forEach(element => {
-            if (element.administrativeLevel === 5 && element.parentName === pe.value) {
+            if (element.administrativeLevel === 4 && pe.value === element.administrativeName) {
+                // console.log(element)
+                document.getElementById('organizationName').value = element.administrativeName;
+                document.getElementById('parentOrganization').textContent = element.parentName;
+                document.getElementById('organizationId').value = element.administrativeCode;
+            } else if (element.administrativeLevel === 5 && element.parentName === pe.value) {
                 let opSo = document.createElement('option');
                 opSo.innerHTML = element.administrativeName;
                 opSo.value = element.administrativeName;
-                so.appendChild(opSo)
+                so.appendChild(opSo);
             }
         })
+    }
+    so.onchange = function () {
+        AllList.forEach(element => {
+            if (element.administrativeLevel === 5 && element.parentName === pe.value && element.administrativeName === so.value) {
+                // console.log(element)
+                document.getElementById('organizationName').value = element.administrativeName;
+                document.getElementById('parentOrganization').textContent = '南海区 / ' + element.parentName;
+                document.getElementById('organizationId').value = element.administrativeCode;
+            }
+        })
+
     }
 }
 getTownInfo()

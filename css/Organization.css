@@ -23,7 +23,6 @@
     border-radius: 5px;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     padding: 20px;
-    /* display: flex; */
     overflow: hidden;
 }
 .mainBody .left{
@@ -40,6 +39,9 @@
 }
 .mainBody .left .content{
     padding:20px
+}
+.mainBody .left .content div{
+    margin: 20px 0;
 }
 .mainBody .right{
     margin: 0 20px;
