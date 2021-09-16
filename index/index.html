@@ -297,7 +297,10 @@
                     <form class="form createTaskPlanModal-form">
                         <label>
                             <div><span style="color: red;">*</span>计划名称</div>
-                            <input type="text" class="form-control">
+                            <div class="taskPlanName" style="flex: 1;margin-right: 10px;position: relative;">
+                                <input type="text" class="form-control">
+                                <span class="wordLengtH" style="right: 10px;">0/20</span>
+                            </div>
                         </label>
                         <label>
                             <div><span style="color: red;">*</span>采集时间</div>
@@ -328,10 +331,9 @@
             </div>
         </div>
     </div>
-
+    <script src="../js/judgeLength.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/forgetPassword.js"></script>
-    <script src="../js/judgeLength.js"></script>
     <script src="../js/map.js"></script>
     <!-- 获取镇村信息 -->
     <script src="../js/getTownInfo.js"></script>

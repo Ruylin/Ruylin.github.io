@@ -13,8 +13,8 @@ function getTownInfo() {
         })
 }
 function setTownInfo(AllList) {
-    var pe = document.getElementById('level-4') || document.getElementById('level-4-1');
-    var so = document.getElementById('level-5') || document.getElementById('level-5-1');
+    var pe = document.getElementById('level-4');
+    var so = document.getElementById('level-5');
     AllList.forEach(element => {
         if (element.administrativeLevel === 4) {
             let opPe = document.createElement('option');

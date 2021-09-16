@@ -88,4 +88,6 @@ $(document).ready(function () {
     setEcharts('echarts-item-4', [
         { value: 28525, name: '鱼塘' },
     ]);
+
+    getLength('.taskPlanName input', '.taskPlanName span', 20);
 });

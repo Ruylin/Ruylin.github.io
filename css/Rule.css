@@ -28,14 +28,15 @@
     height: 40px;
     line-height: 40px;
 }
-.form-gruop label{
+.form-gruop .description{
+    display: inline-block;
     width: 100px;
     text-align: right;
+    font-weight: bold;
 }
-.form-gruop :nth-child(2),
-.form-gruop :nth-child(3),
-.form-gruop :nth-child(4){
-    margin-left: 20px;
+.form-gruop label{
+    margin:0 10px;
+    font-weight: normal;
 }
 .mainBody button{
     margin: 20px;

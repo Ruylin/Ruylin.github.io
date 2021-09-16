@@ -33,8 +33,11 @@ function setTownInfo(AllList) {
             if (element.administrativeLevel === 4 && pe.value === element.administrativeName) {
                 // console.log(element)
                 document.getElementById('organizationName').value = element.administrativeName;
-                document.getElementById('parentOrganization').textContent = element.parentName;
+                document.getElementById('parentOrganization').textContent = document.getElementById('parentOrganization').value = element.parentName;
                 document.getElementById('organizationId').value = element.administrativeCode;
+                if (document.getElementById('areaLevel')) {
+                    document.getElementById('areaLevel').value = element.administrativeLevel;
+                }
             } else if (element.administrativeLevel === 5 && element.parentName === pe.value) {
                 let opSo = document.createElement('option');
                 opSo.innerHTML = element.administrativeName;
@@ -47,8 +50,11 @@ function setTownInfo(AllList) {
         AllList.forEach(element => {
             if (element.administrativeLevel === 5 && element.parentName === pe.value && element.administrativeName === so.value) {
                 // console.log(element)
+                if (document.getElementById('areaLevel')) {
+                    document.getElementById('areaLevel').value = element.administrativeLevel;
+                }
                 document.getElementById('organizationName').value = element.administrativeName;
-                document.getElementById('parentOrganization').textContent = '南海区 / ' + element.parentName;
+                document.getElementById('parentOrganization').textContent = document.getElementById('parentOrganization').value = '南海区 / ' + element.parentName;
                 document.getElementById('organizationId').value = element.administrativeCode;
             }
         })

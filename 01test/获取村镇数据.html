@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>获取镇村</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-    <select name="" id="level-4">
+    <select id="level-4">
         <option hidden>请选择</option>
     </select>
-    <select name="" id="level-5">
+    <select id="level-5">
         <option hidden>请选择</option>
     </select>
-    <script src="../js/getTownInfo.js"></script>
-    <!-- <script>
+
+
+    <!-- <script src="../js/getTownInfo.js"></script> -->
+    <script>
         function getTownInfo() {
             axios({
                 url: "http://192.168.104.217:8280/baseinfo/v1.0/getTreeData",
@@ -43,7 +45,7 @@
                 }
             });
 
-            pe.onclick = function () {
+            pe.onchange = function () {
                 so.innerHTML = `<option hidden>请选择</option>`
                 AllList.forEach(element => {
                     if (element.administrativeLevel === 5 && element.parentName === pe.value) {
@@ -56,7 +58,7 @@
             }
         }
         getTownInfo()
-    </script> -->
+    </script>
 </body>
 
 </html>

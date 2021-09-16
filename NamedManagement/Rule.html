@@ -40,46 +40,65 @@
             <div class="mainBody">
                 <form class="form">
                     <div class="form-gruop">
-                        <label for="">命名规则设置</label>
-                        <input checked type="radio" name="named"> 启用
-                        <input type="radio" name="named"> 未启用
+                        <div class="description">命名规则设置</div>
+                        <label for="namedRuleOn">
+                            <input checked id="namedRuleOn" type="radio" name="named"> 启用</label>
+                        <label for="namedRuleOff">
+                            <input id="namedRuleOff" type="radio" name="named"> 未启用</label>
                     </div>
                     <div class="form-gruop">
-                        <label for="">地块类型前缀</label>
-                        <input checked type="radio" name="plot"> 启用
-                        <input type="radio" name="plot"> 未启用
+                        <div class="description">地块类型前缀</div>
+                        <label for="blockPrefixOn">
+                            <input checked id="blockPrefixOn" type="radio" name="plot"> 启用</label>
+                        <label for="blockPrefixOff">
+                            <input id="blockPrefixOff" type="radio" name="plot"> 未启用</label>
                         <span><b>示例：鱼塘 -</b></span>
                     </div>
                     <div class="form-gruop">
-                        <label for="">镇名字前缀</label>
-                        <input checked type="radio" name="town"> 启用
-                        <input type="radio" name="town"> 未启用
+                        <div class="description">镇名字前缀</div>
+                        <label for="townNameOn">
+                            <input checked id="townNameOn" type="radio" name="town"> 启用</label>
+                        <label for="townNameOff">
+                            <input id="townNameOff" type="radio" name="town"> 未启用</label>
                         <span><b>示例：九江镇 -</b></span>
                     </div>
                     <div class="form-gruop">
-                        <label for="">村名字前缀</label>
-                        <input checked type="radio" name="village"> 启用
-                        <input type="radio" name="village"> 未启用
+                        <div class="description">村名字前缀</div>
+                        <label for="villageNameOn">
+                            <input checked id="villageNameOn" type="radio" name="village"> 启用</label>
+                        <label for="villageNameOff">
+                            <input id="villageNameOff" type="radio" name="village"> 未启用</label>
                         <span><b>示例：水南村 -</b></span>
                     </div>
                     <div class="form-gruop">
-                        <label for="">数字后缀</label>
-                        <input checked type="radio" name="num"> 启用
-                        <input type="radio" name="num"> 未启用
+                        <div class="description">数字后缀</div>
+                        <label for="numberOn">
+                            <input checked id="numberOn" type="radio" name="num"> 启用</label>
+                        <label for="numberOff">
+                            <input id="numberOff" type="radio" name="num"> 未启用</label>
                         <span><b>示例：- 1</b></span>
                     </div>
                     <div class="form-gruop">
-                        <label for="">字母后缀</label>
-                        <input type="radio" name="letter"> 启用
-                        <input checked type="radio" name="letter"> 未启用
-                        <span><b>示例：- A</b></span>
+                        <div class="description">字母后缀</div>
+                        <label for="letterOn">
+                            <input id="letterOn" type="radio" name="letter"> 启用</label>
+                        <label for="letterOff">
+                            <input checked id="letterOff" type="radio" name="letter"> 未启用</label>
+                        <span style="display: none;"><b>示例：- A</b></span>
                     </div>
                     <div class="form-gruop">
-                        <label><b>完整示例</b></label>
-                        <span>九江镇 - 水南村 - 鱼塘 - 1</span>
+                        <div class="description" style="margin-right: 10px;">完整示例</div>
+                        <div id="hintText" style="display:inline-block;">
+                            <span> 九江镇 -</span>
+                            <span> 水南村 -</span>
+                            <span> 鱼塘 -</span>
+                            <span> 1</span>
+                            <span style="display: none;"> A</span>
+                        </div>
                     </div>
-                    <button class="btn btn-primary">修改</button>
                 </form>
+
+                <button class="btn btn-primary">修改</button>
             </div>
         </div>
     </div>
@@ -91,6 +110,7 @@
     <!-- 修改头像 -->
     <link rel="stylesheet" href="../css/loadVia.css">
     <script src="../js/loadVia.js"></script>
+    <script src="../js/Rule.js"></script>
 </body>
 
 </html>
