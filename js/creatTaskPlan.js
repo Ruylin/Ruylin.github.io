@@ -48,3 +48,4 @@ function setTownInfo1(AllList) {
     }
 }
 getTownInfo1()
+getLength('.taskPlanName input', '.taskPlanName span', 20);

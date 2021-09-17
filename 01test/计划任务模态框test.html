@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计划任务模态框test</title>
+    <link rel="stylesheet" href="../BootStrap/css/bootstrap.min.css">
+    <script src="../BootStrap/js/jquery.js"></script>
+    <script src="../BootStrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr id="taskPlanHead">
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody id="taskPlanTbody">
+            <tr>
+                <td>a1</td>
+                <td>a2</td>
+                <td>a3</td>
+                <td>
+                    <a href="#" class='chose1'>111</a>
+                    <a href="#" class='chose2'>222</a>
+                    <a href="#" class='chose3'>查看</a>
+                    <a href="#" class='chose4'>编辑</a>
+                    <a href="#" class='chose5'>删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>b1</td>
+                <td>b2</td>
+                <td>b3</td>
+                <td>
+                    <a href="#" class='chose1'>111</a>
+                    <a href="#" class='chose2'>222</a>
+                    <a href="#" class='chose3'>查看</a>
+                    <a href="#" class='chose4'>编辑</a>
+                    <a href="#" class='chose5'>删除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="modal fade" id="taskPlanModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="taskPlanModealTitle">
+                        提示
+                    </h4>
+                </div>
+
+                <div class="modal-body" id="taskPlanModalBody">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        确认
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/taskPlanngListModal.js"></script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ function getTaskPlanInfo(pageNum = 1, pageSize = 10) {
     })
         .then(function (res) {
             let data = res.data.data
-            console.log(res.data.data);
+            // console.log(res.data.data);
 
             document.getElementById('totalPages').innerHTML = `共${data.total}条`
 
@@ -28,13 +28,17 @@ function setTaskPlanInfo(list) {
     let aTbody = document.getElementById('taskPlanTbody');
     aTbody.innerHTML = '';
     list.forEach(element => {
-        // console.log(element)
+        let chose1 = '', chose2 = '';
         switch (element.planStatus) {
             case 1:
-                element.planStatus = '未发布'
+                element.planStatus = '未发布';
+                chose1 = '发布';
+                chose2 = '启用';
                 break;
             case 2:
                 element.planStatus = '已发布'
+                chose1 = '撤回';
+                chose2 = '停用';
                 break;
             case 3:
                 element.planStatus = '已撤回'
@@ -56,10 +60,11 @@ function setTaskPlanInfo(list) {
             <td>${element.planStatus}</td>
             <td>${element.planRequire}</td>
             <td>
-                <a href="#">发布</a>
-                <a href="#">启用</a>
-                <a href="#">登录</a>
-                <a href="#">编辑</a>
+                <a href="#" class='chose1'>${chose1}</a>
+                <a href="#" class='chose2'>${chose2}</a>
+                <a href="#" class='chose3'>查看</a>
+                <a href="#" class='chose4'>编辑</a>
+                <a href="#" class='chose5'>删除</a>
             </td>
         `;
         aTbody.appendChild(otr);
@@ -81,7 +86,6 @@ function createTaskPlanPages(page, pageNum, pageSize) {
             <span aria-hidden="true">&raquo;</span>
         </a>`;
 
-
     let selectPageSize = document.getElementById('pageSelect');
     selectPageSize.style.cssText = 'float:right;width:100px;margin:0 20px;';
     selectPageSize.classList.add('form-control')
@@ -96,9 +100,6 @@ function createTaskPlanPages(page, pageNum, pageSize) {
         // console.log(selectPageSize.value)
         getTaskPlanInfo(null, selectPageSize.value)
     }
-
-
-
 
     aPageNum.appendChild(preLi);
     for (let i = 1; i <= page; i++) {

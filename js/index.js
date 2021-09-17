@@ -89,5 +89,4 @@ $(document).ready(function () {
         { value: 28525, name: '鱼塘' },
     ]);
 
-    getLength('.taskPlanName input', '.taskPlanName span', 20);
 });

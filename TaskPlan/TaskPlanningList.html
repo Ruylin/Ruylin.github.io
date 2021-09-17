@@ -17,6 +17,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../BootStrap/css/bootstrap-select.min.css">
     <script src="../BootStrap/js/bootstrap-select.min.js"></script>
+    <!-- 创建计划任务 -->
+    <link rel="stylesheet" href="../css/creatTaskPlan.css">
+    <link rel="stylesheet" href="../css/jedate.css">
+    <link rel="stylesheet" href="../css/jedatefont.ttf">
+    <link rel="stylesheet" href="../css/jedatefont.woff">
+    <script src="../js/jedate.min.js"></script>
 </head>
 
 <body>
@@ -93,14 +99,15 @@
             <div class="tableDiv">
                 <table class="table table-hover">
                     <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>任务计划名称</th>
-                            <th>开始时间</th>
-                            <th>结束时间</th>
-                            <th>任务状态</th>
-                            <th>计划要求</th>
-                            <th><button class="btn btn-primary">创建任务计划</button></th>
+                        <tr id="taskPlanHead">
+                            <th class="col-xs-1">ID</th>
+                            <th class="col-xs-2">任务计划名称</th>
+                            <th class="col-xs-2">开始时间</th>
+                            <th class="col-xs-2">结束时间</th>
+                            <th class="col-xs-1">任务状态</th>
+                            <th class="col-xs-2">计划要求</th>
+                            <th class="col-xs-2"><button id="createTaskPlan" class="btn btn-primary">创建任务计划</button>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="taskPlanTbody">
@@ -116,9 +123,84 @@
         </div>
     </div>
 
+
+    <!-- 创建任务模态框 -->
+    <div class="modal fade" id="createTaskPlanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>创建任务计划</h4>
+                    <form class="form createTaskPlanModal-form">
+                        <label>
+                            <div><span style="color: red;">*</span>计划名称</div>
+                            <div class="taskPlanName" style="flex: 1;margin-right: 10px;position: relative;">
+                                <input type="text" class="form-control">
+                                <span class="wordLengtH" style="right: 10px;">0/20</span>
+                            </div>
+                        </label>
+                        <label>
+                            <div><span style="color: red;">*</span>采集时间</div>
+                            <input type="text" class="form-control jeinput" id="dateChose" placeholder="采集任务开始时间">
+                        </label>
+                        <label>
+                            <div><span style="color: red;">*</span>采集区域</div>
+                            <select id="level-4-1" class="form-control">
+                                <option hidden>请选择</option>
+                            </select>
+                            <select id="level-5-1" class="form-control">
+                                <option hidden>请选择</option>
+                            </select>
+                            <button disabled class="btn btn-primary">全选</button>
+                            <button disabled class="btn btn-primary">取消全选</button>
+                        </label>
+                        <label>
+                            <div>采集要求</div>
+                        </label>
+                        <textarea class="form-control" id="" placeholder="请输入采集要求"></textarea>
+                        <label for="taskFile" id="taskFileDiv">
+                            +
+                        </label>
+                        <input type="file" id="taskFile">
+                        <button class="btn btn-primary">保存计划任务</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 表单操作模态框 -->
+    <div class="modal fade" id="taskPlanModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="taskPlanModealTitle">
+                        提示
+                    </h4>
+                </div>
+
+                <div class="modal-body" id="taskPlanModalBody">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        确认
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- 引入数据列表 -->
     <script src="../js/taskPlanngList.js"></script>
-
+    <script src="../js/taskPlanngListModal.js"></script>
     <script src="../js/forgetPassword.js"></script>
     <script src="../js/judgeLength.js"></script>
     <!-- 个人信息模态框 -->
@@ -127,6 +209,9 @@
     <!-- 修改头像 -->
     <link rel="stylesheet" href="../css/loadVia.css">
     <script src="../js/loadVia.js"></script>
+
+    <script src="../js/creatTaskPlan.js"></script>
+    <script src="../js/taskPlanngListModal.js"></script>
 </body>
 
 </html>
